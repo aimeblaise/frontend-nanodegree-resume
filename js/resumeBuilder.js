@@ -104,6 +104,11 @@ function displayWork() {
 	}
 }
 
+if(bio.bioPic) {
+	var formattedImage = HTMLbioPic.replace("%data%", bio.bioPic);
+	$("#header").append(formattedImage);
+}
+
 if(bio.skills.length != 0) {
 	$("#header").append(HTMLskillsStart);
 	for(var i=0; i < bio.skills.length; i++) {
